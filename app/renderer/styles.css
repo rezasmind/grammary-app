@@ -1,0 +1,457 @@
+/* Font settings */
+@import url('../assets/fonts/vazirmatn.css');
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Vazirmatn', 'Tahoma', sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  direction: rtl;
+  font-family: 'Vazirmatn', 'Tahoma', sans-serif;
+}
+
+/* App container */
+#app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 30px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4a6cf7;
+}
+
+/* Button styles */
+.btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #4a6cf7;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #3a5ce5;
+}
+
+.btn-secondary {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.btn-secondary:hover {
+  background-color: #e0e0e0;
+}
+
+/* Form styles */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-input:focus {
+  border-color: #4a6cf7;
+  outline: none;
+}
+
+.form-help {
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Form status */
+.form-status {
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.form-status.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.form-status.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Card styles */
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Settings page */
+.settings-section {
+  margin-bottom: 30px;
+}
+
+.settings-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* API key input */
+.api-key-input {
+  font-family: monospace;
+  letter-spacing: 1px;
+}
+
+/* Subscription info */
+.subscription-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.subscription-status {
+  font-weight: 600;
+}
+
+.status-free {
+  color: #f59f00;
+}
+
+.status-premium {
+  color: #40c057;
+}
+
+/* Action buttons */
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* Auth separator */
+.auth-separator {
+  text-align: center;
+  margin: 15px 0;
+  position: relative;
+}
+
+.auth-separator::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #e0e0e0;
+  z-index: 1;
+}
+
+.auth-separator::after {
+  content: attr(data-text);
+  position: relative;
+  z-index: 2;
+  background-color: white;
+  padding: 0 10px;
+}
+
+/* Tone options */
+.tone-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.tone-btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background-color: #f5f5f5;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tone-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.tone-btn.active {
+  background-color: #4a6cf7;
+  color: white;
+  border-color: #4a6cf7;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .logo {
+    margin-bottom: 10px;
+  }
+  
+  .subscription-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .subscription-info button {
+    margin-top: 10px;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+  
+  .action-buttons button {
+    width: 100%;
+  }
+}
+
+/* Title bar */
+.title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  background-color: #4a6cf7;
+  -webkit-app-region: drag;
+  user-select: none;
+  padding: 0 15px;
+  color: white;
+}
+
+.title-bar .app-title {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.title-bar .window-controls {
+  display: flex;
+  -webkit-app-region: no-drag;
+}
+
+.title-bar .control-button {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  margin-left: 5px;
+  border: none;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.title-bar .control-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.title-bar .control-button.close:hover {
+  background-color: #e81123;
+}
+
+/* Welcome screens */
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  height: calc(100vh - 40px);
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.welcome-logo {
+  font-size: 40px;
+  font-weight: bold;
+  color: #4a6cf7;
+  margin-bottom: 20px;
+}
+
+.welcome-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.welcome-description {
+  font-size: 16px;
+  color: #666;
+  max-width: 600px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.welcome-steps {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.step-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ddd;
+  margin: 0 5px;
+}
+
+.step-indicator.active {
+  background-color: #4a6cf7;
+}
+
+.welcome-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Authentication screens */
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.auth-tabs {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.auth-tab {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  border-radius: 8px 8px 0 0;
+  transition: background-color 0.2s;
+}
+
+.auth-tab.active {
+  background-color: white;
+  font-weight: 500;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.auth-social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.social-auth-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.social-auth-btn:hover {
+  background-color: #f9f9f9;
+  border-color: #ccc;
+}
+
+.social-auth-btn svg {
+  margin-left: 10px;
+}
+
+.auth-separator {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+  color: #777;
+  position: relative;
+}
+
+.auth-separator::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #e0e0e0;
+  z-index: 1;
+}
+
+.auth-separator::after {
+  content: attr(data-text);
+  position: relative;
+  z-index: 2;
+  background-color: white;
+  padding: 0 10px;
+} 

@@ -1,0 +1,91 @@
+{
+  "name": "grammary",
+  "version": "1.0.0",
+  "description": "A grammar correction and translation app for Persian speakers",
+  "main": "app/main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder -mwl",
+    "build:mac": "electron-builder --mac",
+    "build:win": "electron-builder --win",
+    "build:linux": "electron-builder --linux",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rezasmind/grammary-app.git"
+  },
+  "keywords": [
+    "electron",
+    "grammar",
+    "translation",
+    "persian",
+    "language"
+  ],
+  "author": "Reza Aghajani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rezasmind/grammary-app/issues"
+  },
+  "homepage": "https://github.com/rezasmind/grammary-app#readme",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.1",
+    "autoprefixer": "^10.4.21",
+    "axios": "^1.8.2",
+    "electron-reload": "^2.0.0-alpha.1",
+    "electron-selected-text": "^1.1.2",
+    "langdetect": "^0.2.1",
+    "postcss": "^8.5.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4.0.12"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "electron": "^35.0.0",
+    "electron-builder": "^25.1.8",
+    "typescript": "^5.8.2"
+  },
+  "build": {
+    "appId": "com.grammary.app",
+    "productName": "Grammary",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "app/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.utilities",
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "icon": "app/assets/icon.icns",
+      "extendInfo": {
+        "CFBundleDisplayName": "Grammary",
+        "CFBundleName": "Grammary"
+      },
+      "extraResources": [
+        {
+          "from": "app/assets/Info.plist",
+          "to": "Info.plist"
+        }
+      ]
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "app/assets/icon.png"
+    },
+    "linux": {
+      "target": "AppImage",
+      "category": "Utility",
+      "icon": "app/assets/icon.png"
+    }
+  }
+}
